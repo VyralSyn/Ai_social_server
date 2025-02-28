@@ -1,0 +1,23 @@
+# Virtual environment
+venv/
+.env
+
+# Django specific
+*.pyc
+*.pyo
+__pycache__/
+db.sqlite3
+
+# Logs
+*.log
+logs/
+debug.log
+
+# Migrations (optional, but better to keep in repo)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+
