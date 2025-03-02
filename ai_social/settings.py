@@ -14,6 +14,13 @@ DEBUG = False
 # Allowed hosts
 ALLOWED_HOSTS = ['*']
 
+# CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React frontend (local development)
+    "https://vyralmind.ai",  # Production frontend
+    "https://app.vyralmind.ai",  # Backend domain
+]
+
 # Installed apps
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -31,9 +38,9 @@ INSTALLED_APPS = [
 
 # Middleware
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
